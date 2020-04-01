@@ -43,7 +43,7 @@
 
 $(document).ready(function () {
 
-    // Check for video loading complete
+/*    // Check for video loading complete
     var video = document.getElementById("tm-welcome-video");
 
     video.onloadeddata = function() {
@@ -55,7 +55,7 @@ $(document).ready(function () {
             pauseSpeed: 300
         });
     }
-
+*/
     // Update year in copyright text
     document.querySelector('.tm-current-year').textContent = new Date().getFullYear();
 });
