@@ -1,7 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cathy's GameDev Studies</title>
+<!-- 
+
+Timeless Template 
+
+http://www.templatemo.com/tm-517-timeless
+
+-->
+    <!-- load CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <!-- Templatemo style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add icon library for footer-->
+</head>
+
+<script>
+    let myLabels = document.querySelectorAll('.lbl-toggle');
+
+Array.from(myLabels).forEach(label => {
+  label.addEventListener('keydown', e => {
+    // 32 === spacebar
+    // 13 === enter
+    if (e.which === 32 || e.which === 13) {
+      e.preventDefault();
+      label.click();
+    };
+  });
+});
+</script>
 <body>
-<p>Trying out Github pages to host files on Wix blog.
-<br> Why do new site hosting platforms make folders structure so difficult these days?orz</p>
+
+    <div class="container">
+ <!--       <div class="row">
+            <div class="col-lg-12">
+                <header class="text-center tm-site-header">
+                    <div class="tm-site-logo"></div>
+                    <h1 class="pl-4 tm-site-title">Timeless</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tm-video-container">
+                    <video id="tm-welcome-video" class="tm-welcome-video" autoplay loop muted="">
+                        <source src="videos/video.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <div id="tm-video-loader"></div>
+                        <div id="tm-video-text-overlay" class="tm-video-text-overlay d-none">
+                            <h1>
+                                <div id="rotate" class="tm-video-text">
+                                    <div>This is timeless</div>
+                                    <div>We are invincible</div>
+                                    <div>Quite unbeatable</div>
+                                    <div>and indestructible</div>
+                                </div>
+                            </h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="container tm-container-2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="tm-welcome-text">Cathy's GameDev Studies</h2>
+                </div>
+            </div>
+            <div class="row tm-section-mb">
+                <div class="col-lg-12">
+
+            <!-- Games: GREEN->CYAN->YELLOW->ORANGE-->
+
+                    <!--GREEN-->
+                     <div class=" tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="games/04-Adventure/adventure.gif" alt="Image" class="rounded tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark tm-timeline-description">
+                                    <p class="tm-text-green float-right mb-0">Completed Course . 30 March 2020</p>
+                                    <h3 class="tm-text-green tm-font-400">Adventure Game</h3>
+                                    <p>Finished Section 17 of <a href="https://www.udemy.com/course/how-to-program-games/" target="_new">How to Program Games: Tile Classics in JS for HTML5 Canvas</a> and modified the racing game into an adventure game.</p>
+                                    <div class="wrap-collabsible">
+                                          <input id="adventuregame0330" class="toggle" type="checkbox">
+                                          <label for="adventuregame0330" class="tm-text-green lbl-toggle">View Game</label>
+                                        <div class="collapsible-content">
+                                            <div class="content-inner-green">
+                                              <p>Use WASD keys to move around.
+                                                <br>Click on game area if unable to move.
+                                                <iframe id="gameloader" src="games/04-Adventure/adventure.html"></iframe>
+                                              </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-timeline-connector-vertical"></div>
+                    </div>
+
+                    <!--CYAN-->
+                    <div class=" tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="games/03-Racing/racing.gif" alt="Image" class="rounded tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark-light tm-timeline-description">
+                                    <p class="tm-text-cyan float-right mb-0">Course Update . 30 Mar 2020</p>
+                                    <h3 class="tm-text-cyan tm-font-400">Racing Game</h3>
+                                    <p>Finished Sections 6-16 of <a href="https://www.udemy.com/course/how-to-program-games/" target="_new">How to Program Games: Tile Classics in JS for HTML5 Canvas</a> and turned the brick game into a racing game.</p>
+                                    <div class="wrap-collabsible">
+                                          <input id="racinggame0330" class="toggle" type="checkbox">
+                                          <label for="racinggame0330" class="tm-text-cyan lbl-toggle">View Game</label>
+                                        <div class="collapsible-content">
+                                            <div class="content-inner-cyan">
+                                              <p>Player 1: Use WASD to control green car.
+                                            <br>Player 2: Use arrow keys to control blue car.
+                                            <br>Click on game area if unable to move.
+                                            <iframe id="gameloader" src="games/03-Racing/racing.html"></iframe>
+                                              </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-timeline-connector-vertical"></div>
+                    </div>
+
+                    <!--YELLOW-->
+                     <div class=" tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="games/02-Brick/brick.gif" alt="Image" class="rounded tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark tm-timeline-description">
+                                    <p class="tm-text-yellow float-right mb-0">Course Update . 26 Mar 2020</p>
+                                    <h3 class="tm-text-yellow tm-font-400">Brick Game</h3>
+                                    <p>Finished Sections 1-4 of <a href="https://www.udemy.com/course/how-to-program-games/" target="_new">How to Program Games: Tile Classics in JS for HTML5 Canvas</a> and <i>finally</i> finished the Brick Game. 
+                                    </p>
+                                    <p>This took me more than a week to complete due to lack of focus, and to be honest I wouldn't be able to explain half of the functions I wrote for this if asked. I started getting lost halfway through Section 4 on the topics of fine-tuning collision and fixing bugs-- the physics is a little murky and there's one issue I couldn't reproduce at all, so even though I was still able to follow along on the code, I couldn't fully internalize the lessons.
+                                    </p>
+                                    <div class="wrap-collabsible">
+                                          <input id="brickgame0326" class="toggle" type="checkbox">
+                                          <label for="brickgame0326" class="tm-text-yellow lbl-toggle">View Game</label>
+                                        <div class="collapsible-content">
+                                            <div class="content-inner-yellow">
+                                              <p>Click on game area and use mouse to control paddle.
+                                                <iframe id="gameloader" src="games/02-Brick/brick.html"></iframe>
+                                              </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-timeline-connector-vertical"></div>
+                    </div>
+
+                    <!--ORANGE-->
+                    <div class=" tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="games/01-Tennis/tennis.gif" alt="Image" class="rounded tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark-light tm-timeline-description">
+                                    <p class="tm-text-orange float-right mb-0">Completed Course . 16 Mar 2020</p>
+                                    <h3 class="tm-text-orange tm-font-400">Simple Tennis Game</h3>
+                                    <p>Took the course <a href="https://www.udemy.com/course/code-your-first-game/" target="_new">Code Your First Game: Arcade Classic in JavaScript on Canvas</a> by Chris DeLeon and created a simple tennis game. The course is available for FREE at Udemy.</p>
+                                    <div class="wrap-collabsible">
+                                          <input id="tennis163020" class="toggle" type="checkbox">
+                                          <label for="tennis163020" class="tm-text-orange lbl-toggle">View Game</label>
+                                        <div class="collapsible-content">
+                                            <div class="content-inner">
+                                              <p>Click on game area and use mouse to control Left paddle.
+                                                <iframe id="gameloader" src="games/01-Tennis/tennis.html"></iframe>
+                                              </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-timeline-connector-vertical"></div>
+                    </div>
+
+                    <!--END GAME LIST -->
+                </div>
+
+            </div>
+        </div>
+            <!--  row -->
+<!--            <hr>
+           <div class="row tm-section-mb tm-section-mt">
+                <div class="col-lg-4 col-md-4 col-sm-12 pr-lg-5 mb-md-0 mb-4">
+                    <h3 class="mt-2 mb-3 tm-text-gray">Nunc dictum consequat</h3>
+                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
+                    pharetra neque et eleifend venenatis.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 pr-lg-5 mb-md-0 mb-4">
+                    <h3 class="mt-2 mb-3 tm-text-gray">Morbi ultrices tellus</h3>
+                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
+                    pharetra neque et eleifend venenatis.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="mt-2 mb-3 tm-text-gray">Suspendisse dolor tortor</h3>
+                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
+                    pharetra neque et eleifend venenatis.</p>
+                </div>
+            </div> -->
+            <hr>
+        <!-- Footer -->
+        <footer class="row mt-5 mb-5">
+            <div class="col-lg-12">
+                <p class="text-center"><a href="https://www.facebook.com/cath.sanluis" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/kanisthered" class="fa fa-twitter"></a> <a href="https://www.linkedin.com/in/csanluis/" class="fa fa-linkedin"></a> <a href="https://www.instagram.com/cathysanluis/" class="fa fa-instagram"></a></p>
+                <p class="text-center tm-text-gray tm-copyright-text mb-0">Copyright &copy;
+                    <span class="tm-current-year">2020</span> Cathy San Luis 
+                    
+                    | Design: <a href="https://templatemo.com/" target="_new">Templatemo</a> | Collapsible: <a href="https://alligator.io/" target="_new">Alligator</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <!-- .container -->
+
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery-3.2.1.slim.min.js"></script> -->
+    <script src="js/templatemo-script.js"></script>
+
 </body>
 </html>
