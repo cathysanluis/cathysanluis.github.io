@@ -30,7 +30,7 @@ function loadImages(){
 	{worldType: WORLD_WALL, theFile: "world_wall.png"},
 	{worldType: WORLD_GOAL, theFile: "world_goal.png"},
 	{worldType: WORLD_KEY, theFile: "world_key.png"},
-	{worldType: WORLD_DOOR, theFile: "world_DOOR.png"}
+	{worldType: WORLD_DOOR, theFile: "world_door.png"}
 	];
 
 	picsToLoad = imageList.length;
