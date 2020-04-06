@@ -30,22 +30,23 @@ h3 {
 
 /* unvisited link */
 a:link {
-  color: #c5cf5f;
+  color: #C5CF5F;
 }
 
 /* visited link */
 a:visited {
-  color: #c5cf5f;
+  color: #C5CF5F;
 }
 
 /* mouse over link */
 a:hover {
-  color: #e8f748;
+  color: #E8F748;
+
 }
 
 /* selected link */
 a:active {
-  color: #c5cf5f;
+  color: #C5CF5F;
 }
 
 .projectlog {
@@ -59,11 +60,11 @@ a:active {
 .fa {
   padding:5px;
   font-size: 40px;
-  color: #c5cf5f;
+  color: #C5CF5F;
 }
 
 .fa:hover {
-    color: #e8f748;
+    color: #E8F748;
     text-decoration: none;
 }
 
