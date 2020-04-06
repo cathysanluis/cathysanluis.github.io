@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cathy's GameDev Studies - Rotation Puzzle Game</title>
+<!-- 
+
+Timeless Template 
+
+http://www.templatemo.com/tm-517-timeless
+
+-->
+    <!-- load CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="../../css/templatemo-style.css">
+    <!-- Templatemo style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add icon library for footer-->
+</head>
+
+<script>
+    let myLabels = document.querySelectorAll('.lbl-toggle');
+
+Array.from(myLabels).forEach(label => {
+  label.addEventListener('keydown', e => {
+    // 32 === spacebar
+    // 13 === enter
+    if (e.which === 32 || e.which === 13) {
+      e.preventDefault();
+      label.click();
+    };
+  });
+});
+</script>
+<body>
+
+    <div class="container">
+ <!--       <div class="row">
+            <div class="col-lg-12">
+                <header class="text-center tm-site-header">
+                    <div class="tm-site-logo"></div>
+                    <h1 class="pl-4 tm-site-title">Timeless</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tm-video-container">
+                    <video id="tm-welcome-video" class="tm-welcome-video" autoplay loop muted="">
+                        <source src="videos/video.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <div id="tm-video-loader"></div>
+                        <div id="tm-video-text-overlay" class="tm-video-text-overlay d-none">
+                            <h1>
+                                <div id="rotate" class="tm-video-text">
+                                    <div>This is timeless</div>
+                                    <div>We are invincible</div>
+                                    <div>Quite unbeatable</div>
+                                    <div>and indestructible</div>
+                                </div>
+                            </h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="container tm-container-2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="../../index.html"><h2 class="tm-welcome-text">Cathy's GameDev Studies</h2></a>
+                </div>
+            </div>
+            <div class="row tm-section-mb">
+                <div class="col-lg-12">
+
+            <!-- Games: GREEN->CYAN->YELLOW->ORANGE-->
+                    <!--ORANGE-->
+                    <div class=" tm-timeline-item">
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark-light tm-timeline-description">
+                                    
+                                    <p class="tm-text-orange float-right mb-0">16 Mar 2020</p>
+                                    <h3 class="tm-text-orange tm-font-400">Rotation Puzzle Game</h3>
+                                    <p>My first JS project after finishing my Udemy Course! I made this simple rotation puzzle game to contribute to one of <a href="https://hometeamgamedev.com/">HomeTeam GameDev's</a> projects.</p>   
+                                    <hr>
+                                    <p>Click on the rotation buttons to bring colored pieces to the correct slot.
+                                    <p class="tm-text-orange float-right mb-0"><iframe id="gameloader" src="rotation.html"></iframe></p>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="tm-timeline-connector-vertical"></div>
+
+                    <div class=" tm-timeline-item">
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark-light tm-timeline-description" id="projectlog">
+                                    <h3 class="tm-text-orange tm-font-400"></a>Project Update Log</h3>
+                                    <hr>
+                                    <p><font class="tm-text-orange tm-font-400">03 April 2020</font>. There's a lot of refactoring I can still do with the code, but I'm so happy to be able to  start and finish the core gameplay today. Tomorrow I'll work on the winning condition and screen, and maybe a new level or two (or a puzzle randomizer?).
+                                    <p>On a side note though, I'm really glad HomeTeam GameDev members are encouraged to use their own art. Normally, I would have just lifted images off Google and tweaked them a little, but that little rule forced me to be creative. Arriving to this final look took an embarrassingly long time, but I don't think the game would look as sleek as it does now if I'd just lifted stuff off the net. I have also gained an entirely new appreciation for how easy it is to draw shapes in MS Paint, haha!
+                                    <hr>
+                                    <p><font class="tm-text-orange tm-font-400">04 April 2020</font>. I finished the winning condition and screen today. "You Win!" appears below the grid when the puzzle is completed, and there's even a counter for how many puzzles you've finished. The checker was relatively easy to code since the puzzle grid and the moving objects are in separate arrays but use the same constants (1, 2, and 3 for Cross, Triangle and Circle)-- I just had to add a for loop that checks both arrays contain the same set of numbers to declare a win.
+                                    <p>I also added a randomizer for multiple playthroughs. This took me the better half of the day as my first plan was to make an array for the placements of the objects, randomize its contents with unique numbers, then place the objects according to the array...it was a real mess before I realized I can just <b>shuffle</b> my existing arrays. I used the Fisher-Yates algorithm, and got the code (and explanation for it) from <a href="https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb" target="_new">this article by Nitin Panel</a>.
+                                    <hr>
+                                    <p><font class="tm-text-orange tm-font-400">06 April 2020</font>. Chris included my puzzle in this week's update video, and since his project is open to both Apollo and Outpost groups, I got to see some Apollo members' reactions. A lot of them liked it, and I'm embarrassed to admit that I watched that part more than a few times. Again, there's still a lot of refactoring that I can do with the code, and someday I might return to this game, but for now it's working alright so I'll leave it as is and work on a new project.
+                                    </div>
+                            </div>
+                    </div>
+
+                    <!--END GAME LIST -->
+                </div>        
+            </div>
+        </div>
+            <!--  row -->
+<!--            <hr>
+           <div class="row tm-section-mb tm-section-mt">
+                <div class="col-lg-4 col-md-4 col-sm-12 pr-lg-5 mb-md-0 mb-4">
+                    <h3 class="mt-2 mb-3 tm-text-gray">Nunc dictum consequat</h3>
+                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
+                    pharetra neque et eleifend venenatis.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 pr-lg-5 mb-md-0 mb-4">
+                    <h3 class="mt-2 mb-3 tm-text-gray">Morbi ultrices tellus</h3>
+                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
+                    pharetra neque et eleifend venenatis.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="mt-2 mb-3 tm-text-gray">Suspendisse dolor tortor</h3>
+                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
+                    pharetra neque et eleifend venenatis.</p>
+                </div>
+            </div> -->
+            <hr>
+        <!-- Footer -->
+        <footer class="row mt-5 mb-5">
+            <div class="col-lg-12">
+                <p class="text-center"><a href="https://www.facebook.com/cath.sanluis" class="fa fa-facebook" target="_new"></a>
+                    <a href="https://twitter.com/kanisthered" class="fa fa-twitter" target="_new"></a> <a href="https://www.linkedin.com/in/csanluis/" class="fa fa-linkedin" target="_new"></a> <a href="https://www.instagram.com/cathysanluis/" class="fa fa-instagram" target="_new"></a></p>
+                <p class="text-center tm-text-gray tm-copyright-text mb-0">Copyright &copy;
+                    <span class="tm-current-year">2020</span> Cathy San Luis 
+                    
+                    | Design: <a href="https://templatemo.com/" target="_new">Templatemo</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <!-- .container -->
+
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery-3.2.1.slim.min.js"></script> -->
+    <script src="js/templatemo-script.js"></script>
+
+</body>
+</html>

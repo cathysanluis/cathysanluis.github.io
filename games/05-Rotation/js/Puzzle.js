@@ -7,6 +7,7 @@ const PUZZLE_GAP = 10;
 const PUZZLE_COLS = 3;
 const PUZZLE_ROWS = 3;
 
+var puzzlesCompleted = 0;
 var puzzleGrid = [0, 3, 1, 
 				  0, 0, 0, 
 				  2, 0, 0];
@@ -37,6 +38,48 @@ var button3X = 0;
 var button3Y = 0;
 var button4X = 0;
 var button4Y = 0;
+
+var gameWon;
+
+
+function checkArraysMatch(array1, array2){
+
+	var match = 0;
+	for (i=0; i < array1.length; i++){
+		if (array1[i] != 0 && array2[i] !=0){
+			if (array1[i] == array2[i]){
+				match++;
+			}
+		} 
+	}
+
+	if (match > 0) {
+		randomizeGrid();
+	} else {
+		return;
+	}
+}
+
+function shuffle(array){
+	for(i = array.length - 1; i > 0; i--){
+		const j = Math.floor(Math.random() * i);
+		const temp = array[i];
+		array[i] = array[j];
+		array[j] = temp;
+	}
+}
+
+function randomizeGrid(){
+	shuffle(puzzleGrid);
+	shuffle(movingGrid);
+	checkArraysMatch(puzzleGrid, movingGrid);
+}
+
+function puzzleReset(){
+	randomizeGrid();
+	colorRect(0,0, canvas.width,canvas.height, 'black');
+	updateAll();
+}
 
 function drawPuzzle(){
 	
@@ -106,12 +149,27 @@ function drawButtons(){
 	canvasContext.drawImage(useImg, button4X,button4Y);
 }
 
+function winCheck(){
+
+	var notMatch = 0;
+	for (i=0; i<PUZZLE_COLS*PUZZLE_ROWS; i++){
+		if (puzzleGrid[i] != movingGrid[i]){
+			notMatch++;
+		} 
+	}
+	if (notMatch == 0) {
+		puzzlesCompleted++;
+		colorText("You win! Puzzles Completed: "+puzzlesCompleted, 260,525, "white");
+		colorText("Click anywhere to play again.", 265,555, "white");
+		gameWon = 1;
+	}
+}
+
 function puzzleChange(buttonPressed){
 
 	var temp = 0;
 
 	if (buttonPressed == 1){
-		console.log('Button 1 clicked~!');
 		temp = movingGrid[1];
 		movingGrid[1] = movingGrid[0];
 		movingGrid[0] = movingGrid[3];
@@ -120,7 +178,6 @@ function puzzleChange(buttonPressed){
 	} 
 
 	if (buttonPressed == 2) {	
-		console.log('Button 2 clicked~!');
 		temp = movingGrid[2];
 		movingGrid[2] = movingGrid[1];
 		movingGrid[1] = movingGrid[4];
@@ -129,7 +186,6 @@ function puzzleChange(buttonPressed){
 	} 
 
 	if (buttonPressed == 3) {	
-		console.log('Button 3 clicked~!');
 		temp = movingGrid[4];
 		movingGrid[4] = movingGrid[3];
 		movingGrid[3] = movingGrid[6];
@@ -145,5 +201,5 @@ function puzzleChange(buttonPressed){
 		movingGrid[8] = temp;
 	}
 
-
+	winCheck();
 }

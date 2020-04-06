@@ -27,15 +27,44 @@ h3 {
     font-size: 1.3rem;
 }
 
+
+/* unvisited link */
+a:link {
+  color: #c5cf5f;
+}
+
+/* visited link */
+a:visited {
+  color: #c5cf5f;
+}
+
+/* mouse over link */
+a:hover {
+  color: #e8f748;
+}
+
+/* selected link */
+a:active {
+  color: #c5cf5f;
+}
+
+.projectlog {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .fa {
   padding:5px;
-  font-size: 30px;
-  color: white;
+  font-size: 40px;
+  color: #c5cf5f;
 }
 
 .fa:hover {
-    opacity: 0.7;
-    color: black;
+    color: #e8f748;
+    text-decoration: none;
 }
 
 
@@ -144,8 +173,8 @@ a.tm-text-white:focus {
     color: #33CCCC;
 }
 
-.tm-text-yellow {
-    color: #FFFF66;
+.tm-text-red {
+    color: #f28985;
 }
 
 .tm-text-orange {
